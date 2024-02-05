@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Shortest Path Finder</title>
+</head>
+<body>
+    <h1>Find the Shortest Path!</h1>
+    <form method="post" action="/shortestpath">
+        <label for="start_station">Start Station:</label>
+        <input type="text" name="start" required>
+        <br><br><label for="end_station">End Station:</label>
+        <input type="text" name="end" required></br></br>
+        <button type="submit">Find</button>
+    </form>
+
+    {% if shortest_path %}
+        <h3>The shortest path from {{ start_station }} to {{ end_station }} is: {{ shortest_path }}</h3>
+    {% endif %}
+</body>
+</html>
